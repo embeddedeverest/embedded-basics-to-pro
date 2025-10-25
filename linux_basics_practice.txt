@@ -1,0 +1,123 @@
+==============================
+LINUX PRACTICE Commands.
+==============================
+
+Basic Navigation & Help
+------------------------------
+1. pwd — show current directory
+2. ls, ls -l, ls -a — list files
+3. cd, cd .., cd ~ — move around
+4. man ls — read manual for ls
+5. clear — clear the screen
+
+Practice:
+- Create a folder named practice1
+- Move inside it, list all files, and note differences between ls and ls -l
+
+Files & Directories
+--------------------------
+1. mkdir test_dir
+2. touch file1 file2
+3. cp file1 copy_file1
+4. mv copy_file1 renamed_file1
+5. rm renamed_file1
+6. rmdir empty_dir
+7. rm -r test_dir
+
+Practice:
+- Create nested folders and delete them using rm -r carefully
+
+File Viewing & Searching
+-------------------------------
+1. cat, less, head, tail
+2. grep "word" filename
+3. find . -name "*.txt"
+4. locate config.json (after sudo updatedb)
+
+Practice:
+- Search for a keyword in your files using grep
+
+Permissions & Ownership
+------------------------------
+1. chmod 755 script.sh
+2. chmod u+x file.sh
+3. chown user:group filename
+4. ls -l — observe permissions
+
+Practice:
+- Create a file and change its permissions to read-only for others.
+
+I/O Redirection & Pipes
+------------------------------
+1. echo "Hello" > file.txt
+2. cat file.txt >> file2.txt
+3. ls > list.txt
+4. sort file.txt | uniq > unique.txt
+5. grep "error" log.txt | wc -l
+
+Practice:
+- Combine 3 commands using pipes to filter and count words in a file.
+
+System Info & Processes
+------------------------------
+1. top, ps aux
+2. df -h, du -sh *
+3. free -h, uptime
+4. whoami, id
+
+Practice:
+- Find which process is using the most CPU using top
+
+Networking & Archiving
+-----------------------------
+1. ping google.com
+2. ip addr
+3. wget https://example.com
+4. tar -cvf archive.tar folder/
+5. unzip file.zip
+
+Practice:
+- Archive and extract your project folder.
+
+==============================
+VIM PRACTICE SCENARIOS
+==============================
+1. Open vim and create a file: vim notes.txt
+2. Enter insert mode (press i) and type text.
+3. Save and exit: Esc → :wq
+4. Exit without saving: Esc → :q!
+5. Move cursor with h, j, k, l
+6. Copy (yy), paste (p), delete line (dd)
+7. Undo (u), redo (Ctrl + r)
+8. Search: /word and n to go next
+9. Replace: :%s/old/new/g
+10. Practice:
+   - Create a 5-line file and delete alternate lines.
+   - Copy 2 lines and paste below last line.
+   - Replace a word throughout the file.
+
+==============================
+STANDARD I/O PRACTICE QUESTIONS
+==============================
+1. Write a command to take input from user and print it on screen.
+2. Redirect standard output of `ls` into a file.
+3. Redirect standard error of an invalid command into a log file.
+4. Combine stdout and stderr into one file.
+5. Explain the difference between `>` and `>>` with examples.
+6. Write a command to show only first 10 lines of a log file.
+
+==============================
+REDIRECTIONS AND PIPES QUESTIONS
+==============================
+1. Redirect output of `ls` to a file, then count lines.
+2. Find unique words from a text file (use sort and uniq).
+3. Display all `.txt` files containing the word “Linux”.
+4. Display lines containing “error” from multiple log files and count them.
+5. Combine commands to sort numbers and get top 3 highest.
+6. How to append command output to existing file.
+7. Show only the number of files in the current directory using pipes.
+8. Display top 10 processes by memory usage using ps, sort, and head.
+
+==============================
+END OF FILE
+==============================
