@@ -1,0 +1,38 @@
+Oracle Virtual box download link:
+    https://www.oracle.com/in/virtualization/technologies/vm/downloads/virtualbox-downloads.html
+
+Debian download link:
+    https://www.debian.org/distrib/
+
+Follow below Six steps after instllating the debian. <detailed instrucation available in video.>
+
+#0. For full screen install the package, as shown in the video.
+
+#1. Add user to the root list.
+su -
+usermod -aG sudo your_username
+
+
+#2. update the /etc/apt/sources.list
+deb https://deb.debian.org/debian bookworm main non-free-firmware
+deb-src https://deb.debian.org/debian bookworm main non-free-firmware
+
+deb https://security.debian.org/debian-security bookworm-security main non-free-firmware
+deb-src https://security.debian.org/debian-security bookworm-security main non-free-firmware
+
+deb https://deb.debian.org/debian bookworm-updates main non-free-firmware
+deb-src https://deb.debian.org/debian bookworm-updates main non-free-firmware
+
+#3. update
+sudo apt-get update && sudo apt-get upgrade
+
+#4. install the vim. (if you get any error conflict version. first remove it.)
+sudo apt-get remove vim vim-common vim-runtime
+sudo apt-get install vim vim-common vim-runtime
+
+#5. To show user in the login screen.
+sudo mkdir -p /etc/lightdm/lightdm.conf.d/
+sudo vi /etc/lightdm/lightdm.conf.d/01_my.conf
+[Seat:*]
+greeter-hide-users=false
+
